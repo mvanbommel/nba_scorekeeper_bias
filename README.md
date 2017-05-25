@@ -3,5 +3,7 @@ Code for the article "Adjusting for Scorekeeper Bias in NBA Box Scores" publishe
 
 **box_score_data** includes code for the initial examination and simple models (and makes use of ESPN box score data scraped using the [scrape_nba_box_scores](https://github.com/mvanbommel/scrape_nba_box_scores) repository).
 
+**player_tracking_data** will include code for the more advanced contextual model (and makes use of the publicly available player trackind data [here])https://github.com/dcervone/EPVDemo/blob/master/data/2013_11_01_MIA_BKN.csv)).
+
 **To Do:**  
-Add player tracking data code
+Finish adding player tracking data code
