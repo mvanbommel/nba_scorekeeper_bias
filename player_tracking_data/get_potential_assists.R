@@ -180,14 +180,14 @@ potential_assists = data.frame(cbind(game, quarter, team, opponent, home, offens
 pass_defender_distance = rep(NA,nrow(potential_assists))
 poss_defender_distance = rep(NA,nrow(potential_assists))
 for (i in 1:nrow(potential_assists)) {
-  pass_time = as.numeric(potential_assists[,'pass_time'][i]) 
-  poss_time = as.numeric(potential_assists[,'poss_time'][i])
+  pass_time = as.numeric(as.character(potential_assists[,'pass_time'][i]))
+  poss_time = as.numeric(as.character(potential_assists[,'poss_time'][i]))
   
-  pass_position = as.numeric(cbind(potential_assists[,'pass_x'][i], potential_assists[,'pass_y'][i]))
-  poss_position = as.numeric(cbind(potential_assists[,'poss_x'][i], potential_assists[,'poss_y'][i]))
+  pass_position = as.numeric(as.character(cbind(potential_assists[,'pass_x'][i], potential_assists[,'pass_y'][i])))
+  poss_position = as.numeric(as.character(cbind(potential_assists[,'poss_x'][i], potential_assists[,'poss_y'][i])))
   
-  game = as.numeric(potential_assists[,'game'][i])
-  home = as.numeric(potential_assists[,'home'][i])
+  game = as.numeric(as.character(potential_assists[,'game'][i]))
+  home = as.numeric(as.character(potential_assists[,'home'][i]))
   
   if (home == 1){
     pass_defenders = filter(moment_data, game==game, time==pass_time, team==away_team)[c('x', 'y')]
